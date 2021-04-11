@@ -1,0 +1,39 @@
+header {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 10px solid black;
+}
+
+.container {
+    width: 80%;
+    text-align: center;
+}
+
+input {
+    border: none;
+    background-color: lightgray;
+}
+
+.time {
+    border-top: dashed black;
+
+}
+
+button {
+    background-color: rgb(57, 159, 243);
+    border: none;
+    
+}
+
+.row {
+    line-height: 100px;  
+}
+
+.col-lg {
+    background-color: lightgray;
+}
+
+.save-button {
+    background-color: rgb(57, 159, 243);
+}
