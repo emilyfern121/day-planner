@@ -2,33 +2,36 @@
 var today = moment();
 $("#date").text(today.format("dddd MMMM Do, YYYY"));
 
-var textInput = document.querySelector("#event");
-var saveButton = document.querySelector("#save-button");
+var textInput = document.querySelector("#task");
+var saveButton = document.querySelector(".save-button");
+var userTaskSpan = document.querySelector("#user-task");
+
+
 
 renderLastInput()
 
 function renderLastInput() {
-    var event = localStorage.getItem("event");
-    if (!event) {
+    var task = localStorage.getItem("task");
+    if (!task) {
         return;
       }
-    userEventSpan.textContent = event;
+    userTaskSpan.textContent = task;
   }
 
 
-  saveButton.addEventListener("click", function(event) {
+  saveButtons.addEventListener("click", function(event) {
     event.preventDefault();
   
-    var event = document.querySelector("#event").value;
-  
-    if (email === "") {
-      displayMessage("error", "task cannot be blank");
+    var task = document.querySelector("#task").value;
+
+    if (task === "") {
+      prompt("error", "field cannot be blank");
     } else {
-      displayMessage("success", "saved successfully");
+      prompt("success", "saved successfully");
   
-      localStorage.setItem("event", event);
-      renderLastRegistered();
-    }
+    localStorage.setItem("task", task);
+    renderLastInput();
+  }
   });
 
 
